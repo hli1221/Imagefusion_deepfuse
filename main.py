@@ -34,7 +34,7 @@ def main():
         print('\nSuccessfully! Done training...\n')
     else:
         # output_save_path = 'outputs/fused'
-        output_save_path = 'outputs/l1_norm'
+        output_save_path = 'outputs'
         sourceA_name = 'VIS'
         sourceB_name = 'IR'
         print('\nBegin to generate pictures ...\n')
@@ -46,7 +46,7 @@ def main():
         # style_path = 'images/IV/' + sourceA_name
 
         for i in range(1):
-            index = i + 2
+            index = i + 1
             content_path = content_name + str(index) + '.png'
             style_path = style_name + str(index) + '.png'
             generate(content_path, style_path, MODEL_SAVE_PATH, model_pre_path, index, output_path=output_save_path)
