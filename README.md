@@ -6,7 +6,7 @@ Exposure Image Pairs. ICCV2017, pp. 4714-4722](http://openaccess.thecvf.com/cont
 
 
 # Citation
-
+```
 @misc{li2017deepfuse,
     author = {Hui Li},
     title = {Deepfuse based image fusion},
@@ -15,3 +15,4 @@ Exposure Image Pairs. ICCV2017, pp. 4714-4722](http://openaccess.thecvf.com/cont
     journal = {GitHub repository},
     howpublished = {\url{https://github.com/exceptionLi/Imagefusion_deepfuse}}
   }
+```
