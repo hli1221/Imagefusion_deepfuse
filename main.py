@@ -17,8 +17,7 @@ IS_TRAINING = False
 BATCH_SIZE = 2
 EPOCHES = 4
 
-# MODEL_SAVE_PATH = './models/deepfuse_models/deepfuse_model_bs2_epoch4_all.ckpt'
-MODEL_SAVE_PATH = './models/test/deepfuse_model_bs2_epoch4_all.ckpt'
+MODEL_SAVE_PATH = './models/deepfuse_models/deepfuse_model_bs2_epoch4_all.ckpt'
 
 # model_pre_path  = './models/style_weight_1e0_pre0/style_weight_1e0.ckpt'
 model_pre_path  = None
