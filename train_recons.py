@@ -2,6 +2,7 @@
 
 from __future__ import print_function
 
+import scipy.io as scio
 import numpy as np
 import tensorflow as tf
 import matplotlib.pyplot as plt
@@ -25,8 +26,8 @@ def train_recons(original_imgs_path, save_path, model_pre_path, EPOCHES_set, BAT
     EPOCHS = EPOCHES_set
     print("EPOCHES   : ", EPOCHS)
     print("BATCH_SIZE: ", BATCH_SIZE)
-    # num_imgs = len(original_imgs_path)
-    num_imgs = 5000
+    num_imgs = len(original_imgs_path)
+    # num_imgs = 100
     original_imgs_path = original_imgs_path[:num_imgs]
     mod = num_imgs % BATCH_SIZE
 
@@ -107,15 +108,18 @@ def train_recons(original_imgs_path, save_path, model_pre_path, EPOCHES_set, BAT
                         _ssim_loss, _loss = sess.run([ssim_loss, loss], feed_dict={original: original_batch})
                         Loss_all[count_loss] = _loss
                         count_loss += 1
-                        print('step: %d,  total loss: %.3f,  elapsed time: %s' % (step, _loss, elapsed_time))
+                        print('Deep fuse==>>step: %d,  total loss: %s,  elapsed time: %s' % (step, _loss, elapsed_time))
                         print('ssim_loss: %s ' % (_ssim_loss))
 
         # ** Done Training & Save the model **
         saver.save(sess, save_path)
 
-        iter_index = [i for i in range(count_loss)]
-        plt.plot(iter_index, Loss_all[:count_loss])
-        plt.show()
+        loss_data = Loss_all[:count_loss]
+        scio.savemat('D:/project/GitHub/ImageFusion/Imagefusion_deepfuse/DeepFuseLossData.mat', {'loss': loss_data})
+
+        # iter_index = [i for i in range(count_loss)]
+        # plt.plot(iter_index, Loss_all[:count_loss])
+        # plt.show()
 
         if debug:
             elapsed_time = datetime.now() - start_time

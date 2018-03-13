@@ -15,9 +15,10 @@ import os
 IS_TRAINING = False
 
 BATCH_SIZE = 2
-EPOCHES = 2
+EPOCHES = 4
 
-MODEL_SAVE_PATH = './models/deepfuse_models/deepfuse_model_batch_size_2.ckpt'
+# MODEL_SAVE_PATH = './models/deepfuse_models/deepfuse_model_bs2_epoch4_all.ckpt'
+MODEL_SAVE_PATH = './models/test/deepfuse_model_bs2_epoch4_all.ckpt'
 
 # model_pre_path  = './models/style_weight_1e0_pre0/style_weight_1e0.ckpt'
 model_pre_path  = None
@@ -33,22 +34,24 @@ def main():
 
         print('\nSuccessfully! Done training...\n')
     else:
-        # output_save_path = 'outputs/fused'
+
         output_save_path = 'outputs'
-        sourceA_name = 'VIS'
-        sourceB_name = 'IR'
+        # sourceA_name = 'image'
+        # sourceB_name = 'image'
+        sourceA_name = 'IR'
+        sourceB_name = 'VIS'
         print('\nBegin to generate pictures ...\n')
 
         content_name = 'images/IV_images/' + sourceA_name
-        style_name   = 'images/IV_images/' + sourceB_name
-
-        # content_path = 'images/IV/' + sourceB_name
-        # style_path = 'images/IV/' + sourceA_name
+        style_name = 'images/IV_images/' + sourceB_name
 
         for i in range(1):
             index = i + 1
             content_path = content_name + str(index) + '.png'
             style_path = style_name + str(index) + '.png'
+
+            # content_path = content_name + str(index) + '_left.png'
+            # style_path = style_name + str(index) + '_right.png'
             generate(content_path, style_path, MODEL_SAVE_PATH, model_pre_path, index, output_path=output_save_path)
 
         # print('\ntype(generated_images):', type(generated_images))

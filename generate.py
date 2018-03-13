@@ -48,6 +48,6 @@ def _handler(content_name, style_name, model_path, model_pre_path, index, output
 
         output = sess.run(output_image, feed_dict={content: content_img, style: style_img})
         save_images(content_path, output, output_path,
-                    prefix='fused' + str(index), suffix='_deepfuse_bs2')
+                    prefix='fused' + str(index), suffix='_deepfuse_bs2_epoch2')
 
     return output
