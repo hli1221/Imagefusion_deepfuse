@@ -11,7 +11,7 @@ We train this network using [Microsoft COCO dataset](http://msvocds.blob.core.wi
 ```
 @misc{li2017deepfuse,
     author = {Hui Li},
-    title = {Deepfuse based image fusion},
+    title = {CODE: Image Fusion based on Deepfuse},
     year = {2018},
     publisher = {GitHub},
     journal = {GitHub repository},
