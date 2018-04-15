@@ -19,7 +19,7 @@ EPOCHES = 4
 
 MODEL_SAVE_PATH = './models/deepfuse_models/deepfuse_model_bs2_epoch4_all.ckpt'
 
-# model_pre_path is not necessary, ti is just a pre-train model. It is set None when you want to train your own model.
+# model_pre_path is not necessary, it is just a pre-train model. It is set None when you want to train your own model.
 # model_pre_path  = 'your own pre-train model'
 model_pre_path  = None
 
