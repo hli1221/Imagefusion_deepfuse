@@ -19,7 +19,8 @@ EPOCHES = 4
 
 MODEL_SAVE_PATH = './models/deepfuse_models/deepfuse_model_bs2_epoch4_all.ckpt'
 
-# model_pre_path  = './models/style_weight_1e0_pre0/style_weight_1e0.ckpt'
+# model_pre_path is just a pre-train model and not necessary. It is set as None when you want to train your own model.
+# model_pre_path  = 'your own pre-train model'
 model_pre_path  = None
 
 def main():
