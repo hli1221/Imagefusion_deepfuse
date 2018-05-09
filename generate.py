@@ -1,5 +1,4 @@
-# Use a trained Image Transform Net to generate
-# a style transferred image with a specific style
+# Use a trained DeepFuse Net to generate
 
 import tensorflow as tf
 import numpy as np
