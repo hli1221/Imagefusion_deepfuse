@@ -1,5 +1,7 @@
 # Deepfuse - Tensorflow
 
+Python>=3.0, TensorFlow=1.8
+
 The loss function and training strategy are differences whit DeepFuse. I will fix these in the near feature.
 
 This code is based on [K. Ram Prabhakar, V Sai Srikar, R. Venkatesh Babu. DeepFuse: A Deep Unsupervised Approach for Exposure Fusion with Extreme
