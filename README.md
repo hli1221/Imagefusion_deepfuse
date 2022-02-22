@@ -1,6 +1,6 @@
 # Deepfuse - Tensorflow
 
-Python>=3.0, TensorFlow=1.8
+Python>=3.0, TensorFlow=1.8.0
 
 The loss function and training strategy are differences whit DeepFuse. I will fix these in the near feature.
 
