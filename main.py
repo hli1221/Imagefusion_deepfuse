@@ -12,7 +12,7 @@ import os
 # os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
 # IS_TRAINING = True
-IS_TRAINING = False
+IS_TRAINING = True
 
 BATCH_SIZE = 2
 EPOCHES = 4
